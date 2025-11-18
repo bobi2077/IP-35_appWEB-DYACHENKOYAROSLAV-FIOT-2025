@@ -1,4 +1,53 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;900&display=swap');
+
+:root {
+  --header-height: 3.5rem;
+  --first-color: hsl(22, 85%, 50%);
+  --first-color-alt: hsl(22, 85%, 46%);
+  --title-color: hsl(22, 8%, 95%);
+  --text-color: hsl(22, 8%, 65%);
+  --text-color-light: hsl(22, 8%, 45%);
+  --body-color: hsl(22, 15%, 12%);
+  --container-color: hsl(22, 20%, 15%);
+
+  --body-font: 'Poppins', sans-serif;
+  --biggest-font-size: 2rem;
+  --h1-font-size: 1.5rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1rem;
+  --normal-font-size: .938rem;
+  --small-font-size: .813rem;
+  --smaller-font-size: .75rem;
+
+  --font-medium: 500;
+  --font-semi-bold: 600;
+  --font-black: 900;
+
+  --mb-0-25: .25rem;
+  --mb-0-5: .5rem;
+  --mb-0-75: .75rem;
+  --mb-1: 1rem;
+  --mb-1-5: 1.5rem;
+  --mb-2: 2rem;
+  --mb-2-5: 2.5rem;
+
+  --z-tooltip: 10;
+  --z-fixed: 100;
+}
+
+@media screen and (min-width: 992px) {
+  :root {
+    --biggest-font-size: 4rem;
+    --h1-font-size: 2.25rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.25rem;
+    --normal-font-size: 1rem;
+    --small-font-size: .875rem;
+    --smaller-font-size: .813rem;
+  }
+}
+
 *{
   box-sizing: border-box;
   padding: 0;
@@ -47,7 +96,7 @@ button{
   font-size: var(--normal-font-size);
 }
 
-/*=============== REUSABLE CSS CLASSES ===============*/
+
 .section{
   padding: 4.5rem 0 2rem;
 }
@@ -58,7 +107,7 @@ button{
   text-align: center;
 }
 
-/*=============== LAYOUT ===============*/
+
 .container{
   max-width: 968px;
   margin-left: var(--mb-1-5);
@@ -70,10 +119,10 @@ button{
 }
 
 .main{
-  overflow: hidden; /*For animation*/
+  overflow: hidden;
 }
 
-/*=============== HEADER ===============*/
+/* HEADER*/
 .header{
   width: 100%;
   background: var(--body-color); 
@@ -83,7 +132,7 @@ button{
   z-index: var(--z-fixed);
 }
 
-/*=============== NAV ===============*/
+/* NAV */
 .nav{
   height: var(--header-height);
   display: flex;
@@ -160,17 +209,15 @@ button{
   color: var(--text-color);
 }
 
-/* Show menu */
 .show-menu{
   top: 0;
 }
 
-/* Change background header */
+
 .scroll-header{
   background: var(--container-color);
 }
 
-/* Active link */
 .active-link{
   position: relative;
 }
@@ -186,7 +233,7 @@ button{
   border-radius: 50%;
 }
 
-/*=============== HOME ===============*/
+/*= HOME */
 .home__content{
   row-gap: 1rem;
 }
@@ -279,7 +326,7 @@ button{
   border-radius: .5rem;
 }
 
-/*=============== BUTTONS ===============*/
+/* BUTTONS */
 .button{
   display: inline-block;
   background-color: var(--first-color);
@@ -319,7 +366,7 @@ button{
   column-gap: .5rem;
 }
 
-/*=============== CATEGORY ===============*/
+/* CATEGORY */
 .category__container{
   grid-template-columns: repeat(2, 1fr);
   gap: 1rem 2rem;
@@ -343,7 +390,7 @@ button{
   transform: translateY(-.5rem);
 }
 
-/*=============== ABOUT ===============*/
+/* ABOUT */
 .about__container{
   row-gap: 2rem;
 }
@@ -362,7 +409,7 @@ button{
   animation: floating 2s ease-in-out infinite;
 }
 
-/*=============== TRICK OR TREAT ===============*/
+/*TRICK OR TREAT */
 .trick__container{
   grid-template-columns: repeat(2, 1fr);
   gap: 1.5rem;
@@ -422,7 +469,7 @@ button{
   right: 0;
 }
 
-/*=============== DISCOUNT ===============*/
+/* DISCOUNT */
 .discount__container{
   background: var(--container-color);
   border-radius: 1rem;
@@ -444,7 +491,10 @@ button{
   justify-self: center;
 }
 
-/*=============== NEW ARRIVALS ===============*/
+/* NEW ARRIVALS */
+
+
+
 .new__container{
   padding-top: 1rem;
 }
@@ -526,7 +576,7 @@ button{
   right: 0;
 }
 
-/*=============== NEWSLETTER ===============*/
+/* NEWSLETTER */
 .newsletter__description{
   text-align: center;
   margin-bottom: var(--mb-1-5);
@@ -551,7 +601,7 @@ button{
   color: var(--text-color);
 }
 
-/*=============== FOOTER ===============*/
+/* FOOTER */
 .footer{
   position: relative;
   overflow: hidden;
@@ -646,7 +696,7 @@ button{
   margin-top: 4.5rem;
 }
 
-/*=============== SCROLL UP ===============*/
+/*SCROLL UP*/
 .scrollup{
   position: fixed;
   background: var(--container-color);
@@ -670,12 +720,11 @@ button{
   opacity: 1;
 }
 
-/* Show Scroll Up*/
 .show-scroll{
   bottom: 3rem;
 }
 
-/*=============== SCROLL BAR ===============*/
+
 ::-webkit-scrollbar{
   width: 0.6rem;
   background: #413e3e;
@@ -686,8 +735,7 @@ button{
   border-radius: .5rem;
 }
 
-/*===============  BREAKPOINTS ===============*/
-/* For small devices */
+
 @media screen and (max-width: 320px){
   .container{
     margin-left: var(--mb-1);
@@ -710,7 +758,6 @@ button{
   }
 }
 
-/* For medium devices */
 @media screen and (min-width: 576px){
   .about__container{
     grid-template-columns: .8fr;
@@ -820,7 +867,6 @@ button{
   }
 }
 
-/* For large devices */
 @media screen and (min-width: 992px){
   .container{
     margin-left: auto;
